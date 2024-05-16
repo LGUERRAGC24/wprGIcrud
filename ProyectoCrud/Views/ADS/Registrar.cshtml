@@ -1,0 +1,47 @@
+﻿@model ProyectoCrud.Models.TOADS
+
+@{
+    ViewBag.Title = "Registrar ADS";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+div class="row" style="margin-top:30px">
+<div class="col-sm-12">
+
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4>Nuevo contacto</h4>
+        </div>
+        <div class="panel-body">
+            <form action="@Url.Action("Registrar","ADS")" method="post">
+                <div class="form-group">
+                    <label>ID </label>
+                    <input type="text" class="form-control" name="Key" />
+                </div>
+                <div class="form-group">
+                    <label>IDADS</label>
+                    <input type="text" class="form-control" name="IdADS" />
+                </div>
+                <div class="form-group">
+                    <label>IdSolicitudHC</label>
+                    <input type="text" class="form-control" name="IdSolicitudHC" />
+                </div>
+                <div class="form-group">
+                    <label>IdPerfilPuesto</label>
+                    <input type="text" class="form-control" name="IdPerfilPuesto" />
+                </div>
+                <div class="form-group">
+                    <label>IdPuesto</label>
+                    <input type="text" class="form-control" name="IdPuesto" />
+                </div>
+                <button type="submit" class="btn btn-primary">Registrar</button>
+                <a class="btn btn-warning" href="@Url.Action("Inicio","ADS")">Volver</a>
+
+            </form>
+
+
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,46 @@
+﻿@model ProyectoCrud.Models.TOADS
+
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row" style="margin-top:30px">
+    <div class="col-sm-12">
+
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h4>Editar ADS</h4>
+            </div>
+            <div class="panel-body">
+                <form action="@Url.Action("Editar","ADS")" method="post">
+                    <input type="hidden" class="form-control" name="Key" value="@Html.DisplayTextFor(m => m.Key)" />
+                    <div class="form-group">
+                        <label>IdADS</label>
+                        <input type="text" class="form-control" name="IdADS" value="@Html.DisplayTextFor(m => m.IdADS)" />
+                    </div>
+                    <div class="form-group">
+                        <label>IdSolicitudHC</label>
+                        <input type="text" class="form-control" name="IdSolicitudHC" value="@Html.DisplayTextFor(m => m.IdSolicitudHC)" />
+                    </div>
+                    <div class="form-group">
+                        <label>IdPerfilPuesto</label>
+                        <input type="text" class="form-control" name="IdPerfilPuesto" value="@Html.DisplayTextFor(m => m.IdPerfilPuesto)" />
+                    </div>
+                    <div class="form-group">
+                        <label>IdPuesto</label>
+                        <input type="text" class="form-control" name="IdPuesto" value="@Html.DisplayTextFor(m => m.IdPuesto)" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <a class="btn btn-warning" href="@Url.Action("Inicio","ADS")">Volver</a>
+
+                </form>
+
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
